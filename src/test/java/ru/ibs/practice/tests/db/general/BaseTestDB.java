@@ -9,14 +9,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class BaseTest {
+public class BaseTestDB {
     protected Connection connection;
     protected PreparedStatement statement;
 
     @BeforeEach
     public void setUp() {
         DataSource dataSource = new DataSourceConfig().getDataSource();
-
         try {
             connection = dataSource.getConnection();
         } catch (SQLException e) {

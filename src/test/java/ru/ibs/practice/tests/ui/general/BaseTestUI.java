@@ -10,7 +10,7 @@ import ru.ibs.practice.config.SeleniumConfig;
 
 import java.time.Duration;
 
-public class BaseTest {
+public class BaseTestUI {
     protected static WebDriver driver;
     protected static WebDriverWait wait;
     protected static ChromeOptions chromeOptions;
