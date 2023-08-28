@@ -6,11 +6,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import ru.ibs.practice.tests.ui.general.BaseTest;
+import ru.ibs.practice.tests.ui.general.BaseTestUI;
 import ru.ibs.practice.tests.ui.util.XPaths;
 
 @Slf4j
-public class SeleniumPracticeTest extends BaseTest {
+public class SeleniumPracticeTest extends BaseTestUI {
     private static final String NON_EXOTIC_PRODUCT = "Морковь";
     private static final String EXOTIC_PRODUCT = "Дуриан";
 
