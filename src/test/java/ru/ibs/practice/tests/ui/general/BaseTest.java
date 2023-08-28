@@ -1,6 +1,6 @@
 package ru.ibs.practice.tests.ui.general;
 
-import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -31,8 +31,8 @@ public class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    @AfterEach
-    public void close() {
+    @AfterAll
+    public static void close() {
         driver.quit();
     }
 }
