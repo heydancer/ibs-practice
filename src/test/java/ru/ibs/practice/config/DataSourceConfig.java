@@ -14,9 +14,9 @@ public class DataSourceConfig {
 
     public DataSource getDataSource() {
         JdbcDataSource dataSource = new JdbcDataSource();
-        dataSource.setUrl(propConfig.get("jdbc.url"));
-        dataSource.setUser(propConfig.get("jdbc.username"));
-        dataSource.setPassword(propConfig.get("jdbc.password"));
+        dataSource.setUrl(propConfig.get("db.url"));
+        dataSource.setUser(propConfig.get("db.username"));
+        dataSource.setPassword(propConfig.get("db.password"));
 
         return dataSource;
     }
