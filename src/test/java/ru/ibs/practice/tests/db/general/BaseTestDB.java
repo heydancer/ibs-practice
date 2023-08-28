@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 public class BaseTestDB {
     protected Connection connection;
-    protected PreparedStatement statement;
+    protected PreparedStatement preparedStatement;
 
     @BeforeEach
     public void setUp() {
@@ -25,8 +25,8 @@ public class BaseTestDB {
 
     @AfterEach
     public void close() throws SQLException {
-        if (statement != null) {
-            statement.close();
+        if (preparedStatement != null) {
+            preparedStatement.close();
         }
 
         if (connection != null) {
