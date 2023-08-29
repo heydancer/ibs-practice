@@ -1,9 +1,9 @@
-package ru.ibs.practice.tests.db;
+package ru.ibs.practice.tests.db.jdbc;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ru.ibs.practice.tests.db.general.BaseTestDB;
+import ru.ibs.practice.tests.db.jdbc.general.BaseTestDB;
 import ru.ibs.practice.tests.db.model.Food;
 
 import java.sql.ResultSet;
