@@ -35,6 +35,7 @@ public class JdbcPracticeTest extends BaseTestDB {
     private void preCondition() throws SQLException {
         log.info("Проверка наличия таблицы 'FOOD' в схеме БД");
 
+
         preparedStatement = connection.prepareStatement(SQL_SHOW_TABLES);
         ResultSet rs = preparedStatement.executeQuery();
 
@@ -43,6 +44,7 @@ public class JdbcPracticeTest extends BaseTestDB {
         while (rs.next()) {
             if (rs.getString(1).equalsIgnoreCase("food")) {
                 tableExists = true;
+                break;
             }
         }
 
@@ -81,7 +83,7 @@ public class JdbcPracticeTest extends BaseTestDB {
 
         lastFood = foodList.get(foodList.size() - 1);
 
-        Assertions.assertTrue(foodList.size() > 0,
+        Assertions.assertFalse(foodList.isEmpty(),
                 "Записи не найдены");
         Assertions.assertNotNull(lastFood.getId(),
                 "ID не должен быть null");
