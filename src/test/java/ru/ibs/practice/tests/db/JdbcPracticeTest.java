@@ -21,11 +21,15 @@ public class JdbcPracticeTest extends BaseTestDB {
     private Food lastFood;
 
     @Test
-    public void testAddingProductInDb() throws SQLException {
-        preCondition();
-        firstStep();
-        secondStep();
-        postCondition();
+    public void testAddingProductInDb() {
+        try {
+            preCondition();
+            firstStep();
+            secondStep();
+            postCondition();
+        } catch (SQLException e) {
+            Assertions.fail("Ошибка при добавлении продукта в базу данных", e);
+        }
     }
 
     private void preCondition() throws SQLException {
