@@ -35,7 +35,6 @@ public class JdbcPracticeTest extends BaseTestDB {
     private void preCondition() throws SQLException {
         log.info("Проверка наличия таблицы 'FOOD' в схеме БД");
 
-
         preparedStatement = connection.prepareStatement(SQL_SHOW_TABLES);
         ResultSet rs = preparedStatement.executeQuery();
 
