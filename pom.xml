@@ -26,6 +26,10 @@
         <lombok.version>1.18.24</lombok.version>
         <!-- Logback version -->
         <logback.version>1.2.9</logback.version>
+        <!-- H2 version -->
+        <h2.version>2.2.220</h2.version>
+        <!-- Spring JDBC version -->
+        <spring.jdbc.version>5.3.24</spring.jdbc.version>
 
     </properties>
 
@@ -59,6 +63,21 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.jdbc.version}</version>
         </dependency>
 
     </dependencies>
